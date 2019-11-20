@@ -1,7 +1,13 @@
 #pragma once
 #include <iterator>
+#include <iostream>
+
+
+#include <sstream>
+#include <string>
 #include <map>
-#include "MyPair.h"
+
+
 using namespace std;
 
 
@@ -15,6 +21,7 @@ class Node
 
 public:
 	
+
 	// A node with a value, neighbours and cost paths
 	Node(T);
 	// Returns node's value
@@ -37,6 +44,8 @@ public:
 	void SetParentNode(Node<T>*);
 	// Get parent node
 	Node<T>* GetParentNode();
+
+	bool visited = false;
 
 	
 	// Printing functions //
